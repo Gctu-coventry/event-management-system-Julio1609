@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navigationcss.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+        </script>
+</head>
+<body>
+ <!----------------------------------------------navigation-------------------------------------------->
+  <nav>     
+<label class="logo">InterContenental Sunny plaza</label>
+<ul>
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="feedback-html.html">Feedback</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="login.php">Login</a></li>
+</ul>
+ <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+</nav>
+<!----------------------------------------------Header-------------------------------------------->
+<div class="wall"><div class="cover">
+  <div><h1 align = center><font size = 7>A Space to Work, Meet & Relax</font></h1>
+   <p align=center> <font size=4>Enjoy the comfort of a professionally equiped business meeting venue and cooperate efficiently</font></p>
+  </div>
+</div></div>
+
+<!----------------------------------------------footer-------------------------------------------->
+<footer class="footer">
+  <div class="container2">
+    <div class="row">
+      <div class="footer-col">
+      <h4>company</h4>
+      <ul>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">our services</a></li>
+        <li><a href="#">privacy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>get help</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="new-login-html.html">Booking</a></li>
+        <li><a href="new-login-html.html">return status</a></li>
+        <li><a href="new-login-html.html">booking status</a></li>
+        <li><a href="new-login-html.html">payment  options</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>online Booking</h4>
+      <ul>
+        <li><a href="#">reservations</a></li>
+        <li><a href="#">gathering</a></li>
+        <li><a href="#">performance</a></li>
+        <li><a href="#">business meetings</a></li>
+      </ul>
+    </div>
+    <div class="footer-col" >
+      <h4>follow us</h4>
+      <div class="social-links">
+        <a href="#"></a>
+      </div>
+
+    </div>
+    
+    
+  </div>
+  </div>
+  
+</footer>
+
+
+
+<!----------------------------------------------Footer-Css-------------------------------------------->
+
+    <style>
+      *{
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+.container2{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color:#bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+    </style>
+    
+</body>
+</html>

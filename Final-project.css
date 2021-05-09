@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ body{
+     font-family: sans-serif;
+ }
+
+ 
+ .container{
+     transform-style: preserve-3d;
+     min-height: 100vh;
+     width: 100%;
+     background-color: #485461;
+     background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+     overflow-x: hidden;
+     
+ }
+ .navbar{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 10;
+     height: 3rem;
+     
+     
+     
+ }
+ .menu{
+     max-width: 72rem;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 2rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: white;
+ }
+ .logo{
+     font-weight:bold;
+     position: fixed;
+     padding-left: 1040px;
+     padding-top: 82px;
+     display: flex;
+     
+
+ }
+ .humburger-menu{
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     height: 4rem;
+     width: 3rem;
+     cursor: pointer;
+     position: fixed;
+     top: 10px;
+     right: 1260px;
+ }
+ .bar{
+     width: 1.9rem;
+     height: 1.5px;
+     border-radius: 2px;
+     background-color: #eee;
+     transition: 0.5s;
+     position: relative;
+     
+ }
+ .bar::before, .bar::after{
+     content: "";
+     position:absolute;
+     width: inherit;
+     height: inherit;
+     background-color: #eee;
+     transition: 0.5;
+ }
+ .bar::before{
+     transform: translateY(-9px);
+ }
+ .bar::after{
+     transform: translateY(9px);
+ }
+ .main{
+     transform-style: preserve-3d;
+     position: relative;
+     transform-origin: right;
+     width: 100%;
+     left: 0;
+     z-index: 5;
+     background-color: white;
+     overflow: hidden;
+     transition: 0.5s;
+ }
+ header{
+     min-height: 100vh;
+     width:100%;
+     background: url("office.jpg") no-repeat top center / cover;
+     position:relative ;
+ }
+ .overlay{
+     position: absolute;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     display: flex;
+     background-color: rgba(43, 51, 59, 0.8);
+
+ }
+ .inner{
+     max-width: 35rem;
+     text-align: center;
+     color: white;
+     padding: 0 2rem;
+     
+ }
+ .title{
+     font-size:43px;
+ }
+ .btn{
+     margin-top: 1rem;
+     padding: 10px 15px;
+     border: 2px solid rgb(56, 255, 6);
+     border-radius: 30px;
+     color: white;
+     text-decoration: none;
+     cursor: pointer;
+     text-transform:capitalize;
+     position: relative;
+     top: 25px;
+ }
+ .btn:hover{
+     color: black;
+     background: rgb(56, 255, 6);
+ }
+ .container.active .bar{
+     cursor:pointer;
+     transform: rotate(360deg);
+     background-color: transparent;
+ }
+ .container.active .bar::before{
+     transform: translateY(0) rotate(45deg);
+
+ }
+ .container.active .bar::after{
+    transform: translateY(0) rotate(-45deg);
+ }
+ .container.active .main {
+     cursor: pointer;
+     transform: perspective(1300px) rotateY(-15deg) translateZ(300px) scale(0.5);
+    animation: 0.5s ease;
+ }
+ @keyframes main-animation {
+     from {
+         transform: translate(0);
+     }
+
+     to {
+        transform: perspective(1300px) rotateY(-15deg) translateZ(300px) scale(0.5);
+
+     }
+ }
+ .links {
+    position: absolute;
+    width: 20%;
+    left: 100px;
+    top: 0;
+    height:100vh;
+    z-index: 2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(10px);
+    
+ }
+ ul{
+     list-style: none;
+ }
+ .links a {
+     text-decoration: none;
+     color: #eee;
+     padding: 0.7rem 0;
+     display:inline-block;
+     font-size: 1rem;
+     font-weight:300;
+     text-transform: capitalize;
+     transition: 0.3s;
+     letter-spacing: 1px;
+     transform: translateY(10px); 
+     animation: hide 0.5s forwards ease var(--i));
+     
+ }
+ .links a:hover{
+    color:rgb(56, 255, 6);
+ }
+ 
+ 
